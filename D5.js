@@ -159,7 +159,17 @@ console.log( HowManyDays(2010));
 /* Ex.10
    Write the function IsTodayMyBDay that returns true if it's your birthday, false otherwise
 */
-
+function IsTodayMyBDay(dt){
+ let today = new Date();
+ let date   = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+ if (date===dt){
+    return true
+ }else{
+     return false
+ }
+ 
+}
+console.log(IsTodayMyBDay("2020-10-2"));
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of the file
 
