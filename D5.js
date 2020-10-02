@@ -176,11 +176,30 @@ console.log(IsTodayMyBDay("2020-10-2"));
 /* Ex.11
    Write the function DeleteProp that receives an object and a string, and returns the object after deleting the property with that given name
 */
+function DeleteProp(key , ojb){
 
+for(let str in ojb){
+    if(str===key)
+    delete ojb.str
+}
+
+}
 /* Ex.12 
     Write the function OlderMovie that finds the older movie in the array
 */
 
+
+function OlderMovie( film){
+    film = new movies
+    let arr
+
+    for(  let x in  film.Year){
+        let n =arr.push(film)
+}
+return n
+
+}
+OlderMovie(movies)
 /* Ex.13
     Write the function CountMovies that returns the number of movies into the array
 */
