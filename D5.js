@@ -50,20 +50,44 @@ console.log(me);
 /* Ex.1
     Write the function Dice that randomize an integer number between 1 and 6
 */
-
+function Dice() {
+   let arr=[];
+    for(i=1;i<6;i++) {
+        arr.push(Math.floor(Math.random(i)*10));
+    }
+ return arr;
+}
+console.log(Dice());
 /* Ex.2 
     Write the function WhoIsBigger that receives 2 numbers and returns the bigger of the 2
 */
+function WhoIsBigger(x,y) {
 
+if(x>y){
+    return x
+}
+else{ return y}
+
+}
 /* Ex.3
     Write the function SplitMe that receives a String and returns an array with every word in that string
     Ex. SplitMe("I love coding") => returns [ "I","Love","Coding"]
 */
-
+function SplitMe(str){
+    splited = str.split(" ");
+    return splited
+}
+console.log(SplitMe("I love coding"));
 /* Ex.4
     Write the function DeleteOne that receives a string and a boolean. If the boolean is true, should return the string without the first letter, otherwise should remove the last one
 */
+function DeleteOne(x,bool){
+if(bool === true){
+return x.substr(1,x.length-1);
+}else{
 
+}
+}
 /* Ex.5
    Write the function OnlyLetters that receives a string, removes all the numbers and returns it.
    Ex.: OnlyLetters("I love 123 whatever")  => returns "I love whatever"
