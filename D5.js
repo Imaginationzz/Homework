@@ -149,11 +149,12 @@ console.log(RollTheDices());
 /* Ex.9
    Write the function HowManyDays that receives a Date and return the number of days that has passed since that day.
 */
-function HowManyDays(date){
-    let days = moment().diff("2015-06-02", "days");
-    return days
+function HowManyDays(dt){
+    let today = new Date();
+    let date = today.getFullYear();
+   return (date - dt)*365
 }
-console.log( HowManyDays('2015-06-02');
+console.log( HowManyDays(2010));
 
 /* Ex.10
    Write the function IsTodayMyBDay that returns true if it's your birthday, false otherwise
