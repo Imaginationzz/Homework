@@ -46,7 +46,8 @@
           padding: 10px;
           margin: 5px;
           border: 1px solid #dedede;
-          width: 150%;
+          width: 200%;
+          align-items: center;
         }
         footer {
          position:absolute;
@@ -62,15 +63,22 @@
          border-collapse: collapse;
          padding: 15px;
        }
-       
+       textarea{
+         height: 100px;
+         width:300px;
+         background-color: aquamarine;
+       }
+       input{
+         background-color: brown;
+       }
       </style>
 </head>
 
 <body >
     <h1 style="text-align:center",color="red">the Smartphone shop</h1>
-    <div style="height: 50%;">
+    <div >
         <label for="message">write your message here:</label><br>
-        <input  type="text" id="message" name="bmessage"><br><br><br>
+        <textarea  type="text" id="message" name="bmessage"></textarea><br><br><br>
     </div>
     <div>
     <table >
@@ -110,15 +118,22 @@
             <td><img src="image5.jpg" alt="Nokia"></td>
         </tr>
     </div>
+    <div>
+      <input type="button" id="changeheader" value="change header" onclick="changeheader()" />
+      <input type="button" id="changebak" value="change bg" onclick="changebg()" />
+      <input type="button" id="changeadress" value="change adress" onclick="fAdress()" />
+    </div>
+    <div>
         <footer>
             <p>The smartphobe shop</p>
             <p>Adress :Berlin near the wall</p>
             <p><a href="mailto:Smartphone@example.com">Smartphone@example.com</a></p>
           </footer>
+    </div>
           <script>
             function changeheader() {
               let changeh = document.querySelector('h1')
-              changeh.innerText("Heading changed")
+              changeh.innerText="heading changed"
             }
 
               function changebg() {
@@ -128,7 +143,7 @@
 
              function fAdress() {
               let changeF = document.querySelector('footer')
-              changeF.innerText("just a fake adress")
+              changeF.innerText="just a fake adress"
               }
             
       
