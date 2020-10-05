@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!--
+        You have been assigned to the creation of a Smartphone Shop Website.
+        The shop is just a showcase of the products of the shop with some extra informations.
+        No shopping cart / checkout features are required.
+        EX1.:
+        Add H1 title with the name of the shop
+        EX2.: 
+        Add a TABLE with the top 5 products of the shop
+        EX3.: 
+        Each product should have one image, title, description and price
+        EX4.:
+        Add Map to the shop 
+        EX5.: 
+        Add the links to Amazon products for each item in the table
+        EX6.:
+        Add a footer with the address and the name of the shop
+        EX7.: 
+        Add a message board where the user can type a message in it (only client side)
+        // EXTRA 
+        EX8.: 
+        Write a function to change the heading text
+        EX9.:
+        Write a function to change the page background color
+        EX10.:
+        Write a function to change the footer address with a fake one
+    -->
+    <style>
+        html {
+          font-family: sans-serif;
+          color: #333;
+        }
+        body {
+          max-width: 500px;
+          margin: 0 auto;
+          padding: 0 15px;
+          background-color:green;
+        }
+        div {
+          padding: 10px;
+          margin: 5px;
+          border: 1px solid #dedede;
+          width: 150%;
+        }
+        footer {
+         position:absolute;
+         bottom:0;
+        width:50%;
+        height:40px;   
+        background:#6cf;
+      }
+      table, td {
+         border: 1px solid black;
+         width: 80%;
+         background-color:sandybrown;
+         border-collapse: collapse;
+         padding: 15px;
+       }
+       
+      </style>
+</head>
+
+<body >
+    <h1 style="text-align:center",color="red">the Smartphone shop</h1>
+    <div style="height: 50%;">
+        <label for="message">write your message here:</label><br>
+        <input  type="text" id="message" name="bmessage"><br><br><br>
+    </div>
+    <div>
+    <table >
+        <tr>
+            <td>Iphone</td>
+            <td>555</td>
+            <td>Desc</td>
+            <td><a href="amazon.com">amazon shop</a></td>
+            <td><img src="image1.jpg" alt="Iphone"></td>
+        </tr>
+        <tr>
+            <td>Samsung</td>
+            <td>222</td>
+            <td>Desc</td>
+            <td><a href="amazon.com">amazon shop</a></td>
+            <td><img src="image2.jpg" alt="Samsung"></td>
+         </tr>
+         <tr>
+            <td>Huawei</td>
+            <td>444</td>
+            <td>Desc</td>
+            <td><a href="amazon.com">amazon shop</a></td>
+            <td><img src="image3.jpg" alt="Huawei"></td>
+         </tr>
+        <tr>
+            <td>LG</td>
+            <td>666</td>
+            <td>Desc</td>
+            <td><a href="amazon.com">amazon shop</a></td>
+            <td><img src="image4.jpg" alt="LG"></td>
+        </tr>
+        <tr>
+            <td>Nokia</td>
+            <td>777</td>
+            <td>Desc</td>
+            <td><a href="amazon.com">amazon shop</a></td>
+            <td><img src="image5.jpg" alt="Nokia"></td>
+        </tr>
+    </div>
+        <footer>
+            <p>The smartphobe shop</p>
+            <p>Adress :Berlin near the wall</p>
+            <p><a href="mailto:Smartphone@example.com">Smartphone@example.com</a></p>
+          </footer>
+          <script>
+            function changeheader() {
+              let changeh = document.querySelector('h1')
+              changeh.innerText("Heading changed")
+            }
+
+              function changebg() {
+              let changeb = document.querySelector('html')
+              changeb.style.backgroundColor="red"
+              }
+
+             function fAdress() {
+              let changeF = document.querySelector('footer')
+              changeF.innerText("just a fake adress")
+              }
+            
+      
+            
+          </script>
+</body>
+
+
+</html>
