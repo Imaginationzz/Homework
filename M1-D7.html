@@ -85,6 +85,7 @@
               <input type="button" id="changls" value="changeListTitle" onclick="changeListTitle(content)" />
               <input type="button" id="changeItem" value="changeItem" onclick="addToTheSecond()" />
               <input type="text" id="enterItem"  />
+              
           </div>
     <div >
         <label for="message"><b>write your message here:</b></label><br>
@@ -93,7 +94,7 @@
     <div>
     <table >
         <tr>
-            <td>Iphone</td>
+            <td mouseenter= "makeThemMagnifiable()">Iphone</td>
             <td>555</td>
             <td>Desc</td>
             <td><a href="amazon.com">amazon shop</a></td>
@@ -248,7 +249,12 @@
       When the user mouse goes on a table cell (not the image one) the font size must increase.
       HINT use mouseenter / mouseleave events
   */
-  const makeThemMagnifiable = function () {};
+  const makeThemMagnifiable = function () {
+      let mag = document.querySelectorAll("td")
+      for(i=0;i<=mag.length;i++){
+          mag[i].innerText.fontsize="30px"
+      }
+  };
   /* EXERCISE 10
       Add a button to toggle all the product images (toggle => if visible, hide, if not visible, show)
   */
@@ -259,7 +265,9 @@
   /* EXERCISE 11
       Make the heading of the page change color radomly every time the user clicks on it
       */
-  const makeItClickable = function () {};
+  const makeItClickable = function () {
+      
+  };
 
   /*EXERCISE 12
     Refactor your HTML code with HTML5 semantic tags such as header, section, footer, etc
