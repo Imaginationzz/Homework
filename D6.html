@@ -41,25 +41,29 @@
           margin: 0 auto;
           padding: 0 15px;
           background-color:darkseagreen;
+          height: 100%;
         }
         h1{
           background-color: crimson;
         }
         div {
-          padding: 10px;
+          
+          padding:10px;
           position: relative;
-          margin: 5px;
-          border: 1px solid #dedede;
+          margin: auto;
+          border: 1px solid white;
           width: 200%;
           align-items: center;
         }
         
       table, td {
-         border: 1px solid black;
+         border: 3px solid black;
          width: 80%;
          background-color:darkturquoise;
          border-collapse: collapse;
          padding: 15px;
+         align-self: center;
+         
        }
        textarea{
          height: 100px;
@@ -69,13 +73,29 @@
        input{
          background-color: brown;
        }
+       #body{
+    padding-bottom: 100px;    /* height of footer */
+       }
+       #holder{
+    min-height: 100%;
+    position:relative;
+      }  
+      footer{
+    height: 100px; 
+    width:100%;
+    position: absolute;
+    left: 0;
+    bottom: 0; 
+}
+
+       
       </style>
 </head>
 
 <body >
-    <h1 style="text-align:center",color="red">The Smartphone shop</h1>
+    <header id="holder"><h1 style="text-align:center",color="red" ><b>The Smartphone shop</b></h1></header>
     <div >
-        <label for="message">write your message here:</label><br>
+        <label for="message"><b>write your message here:</b></label><br>
         <textarea  type="text" id="message" name="bmessage"></textarea><br><br>
     </div>
     <div>
@@ -85,7 +105,7 @@
             <td>555</td>
             <td>Desc</td>
             <td><a href="amazon.com">amazon shop</a></td>
-            <td><img src="image1.jpg" alt="Iphone"></td>
+            <td ><img  src="hhttps://specials-images.forbesimg.com/imageserve/5f332cfb23bd6522ad0eade1/960x0.jpg?fit=scale"  alt="Iphone"></td>
         </tr>
         <tr>
             <td>Samsung</td>
@@ -116,12 +136,12 @@
             <td><img src="image5.jpg" alt="Nokia"></td>
         </tr>
     </div>
-    <div>
+    
       <input type="button" id="changeheader" value="change header" onclick="changeheader()" />
       <input type="button" id="changebak" value="change bg" onclick="changebg()" />
       <input type="button" id="changeadress" value="change adress" onclick="fAdress()" />
-    </div>
-    <div>
+    
+    <div id="body">
         <footer>
             <p>The smartphobe shop</p>
             <p>Adress :Berlin near the wall</p>
