@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The smartphone Shop</title>
+    <style>
+        html {
+          font-family: sans-serif;
+          color: #333;
+        }
+        body {
+          max-width: 500px;
+          margin: 0 auto;
+          padding: 0 15px;
+          background-color:darkseagreen;
+          height: 100%;
+        }
+        h1{
+          background-color: rgb(139, 161, 24);
+          border: 2px;
+        }
+        div {
+          
+          padding:10px;
+          position: relative;
+          margin: auto;
+          border: 1px solid white;
+          width: 200%;
+          align-items: center;
+        }
+        
+      table, td {
+         border: 3px solid black;
+         width: 80%;
+         background-color:darkturquoise;
+         border-collapse: collapse;
+         padding: 15px;
+         align-self: center;
+         
+       }
+       textarea{
+         height: 100px;
+         width:300px;
+         background-color: aquamarine;
+       }
+       input{
+         background-color: brown;
+       }
+       #body{
+    padding-bottom: 100px;    /* height of footer */
+       }
+       #holder{
+    min-height: 100%;
+    position:relative;
+      }  
+      footer{
+    height: 100px; 
+    width:100%;
+    position: absolute;
+    left: 0;
+    bottom: 0; 
+}
+
+       
+      </style>
+</head>
+
+<body >
+    <header id="holder"><h1 style="text-align:center",color="purple" onmousemove="removeClassFromTitle()" onmouseover="addClassToTitle()" ><b>The Smartphone shop</b></h1></header>
+    <h2 id="listTitle">Todo List</h2>
+          <ul id="firstList">
+              <li><p>1st</p></li>
+              <li>2nd</li>
+              <li>3rd</li>
+          </ul>
+          <ul id="secondList">
+              <li>1st</li>
+              <li>2nd</li>
+              <li>3rd</li>
+          </ul>
+          <div>
+              <p id="p1"></p>This text is just for the exercise</p>
+              <input type="button" id="changep" value="changePContent" onclick="changePContent()" />
+              <input type="button" id="changls" value="changeListTitle" onclick="changeListTitle(content)" />
+              <input type="button" id="changeItem" value="changeItem" onclick="addToTheSecond()" />
+              <input type="text" id="enterItem"  />
+          </div>
+    <div >
+        <label for="message"><b>write your message here:</b></label><br>
+        <textarea  type="text" id="message" name="bmessage"></textarea><br><br>
+    </div>
+    <div>
+    <table >
+        <tr>
+            <td>Iphone</td>
+            <td>555</td>
+            <td>Desc</td>
+            <td><a href="amazon.com">amazon shop</a></td>
+            <td ><img  src="hhttps://specials-images.forbesimg.com/imageserve/5f332cfb23bd6522ad0eade1/960x0.jpg?fit=scale"  alt="Iphone"></td>
+        </tr>
+        <tr>
+            <td>Samsung</td>
+            <td>222</td>
+            <td>Desc</td>
+            <td><a href="amazon.com">amazon shop</a></td>
+            <td><img src="image2.jpg" alt="Samsung"></td>
+         </tr>
+         <tr>
+            <td>Huawei</td>
+            <td>444</td>
+            <td>Desc</td>
+            <td><a href="amazon.com">amazon shop</a></td>
+            <td><img src="image3.jpg" alt="Huawei"></td>
+         </tr>
+        <tr>
+            <td>LG</td>
+            <td>666</td>
+            <td>Desc</td>
+            <td><a href="amazon.com">amazon shop</a></td>
+            <td><img src="image4.jpg" alt="LG"></td>
+        </tr>
+        <tr>
+            <td>Nokia</td>
+            <td>777</td>
+            <td>Desc</td>
+            <td><a href="amazon.com">amazon shop</a></td>
+            <td><img src="image5.jpg" alt="Nokia"></td>
+        </tr>
+    </div>
+    
+      <input type="button" id="changeheader" value="change header" onclick="changeheader()" />
+      <input type="button" id="changebak" value="change bg" onclick="changebg()" />
+      <input type="button" id="changeadress" value="change adress" onclick="fAdress()" />
+    
+    <div id="body">
+        <footer>
+            <p>The smartphobe shop</p>
+            <p>Adress :Berlin near the wall</p>
+            <p><a href="mailto:Smartphone@example.com">Smartphone@example.com</a></p>
+          </footer>
+    </div>
+            
+            <script>
+                function changeheader() {
+                let changeh = document.querySelector('h1')
+                changeh.innerText="heading changed"
+                }
+
+                function changebg() {
+                let changeb = document.querySelector('html')
+                changeb.style.backgroundColor="red"
+                }
+
+                function fAdress() {
+                let changeF = document.querySelector('footer')
+                changeF.innerText="just a fake adress"
+                }
+                
+      
+  /*EXERCISE 1 
+     Create a new welcome alert message when the page successfully loads
+    */
+  window.onload = function () {
+      alert("page successfully loaded")
+  };
+  /* EXERCISE 2
+      Write a function to change the Title of the page in something else (execute the function in browser console)
+  */
+  const changeTitle = function (newTitle) {
+      document.querySelector("title")="the new Shop Interface"
+  };
+  /* EXERCISE 3a
+      Write a function to add a class to the page's h1 title in "red-color" (execute the function when title is hovered by mouse).
+  */
+  const addClassToTitle = function () {
+      hc=document.querySelector("h1")
+      hc.style.backgroundColor="red"
+  };
+  /* EXERCISE 3b
+      Write a function to remove "red-color" class from previous h1 (execute the function when the mouse leaves the title).
+  */
+  const removeClassFromTitle = function () {
+      hc.style.backgroundColor="purple"
+  };
+  /* EXERCISE 4
+      Add the following html snippet to your page:
+          <h2 id="listTitle">Todo List</h2>
+          <ul id="firstList">
+              <li><p>1st</p></li>
+              <li>2nd</li>
+              <li>3rd</li>
+          </ul>
+          <ul id="secondList">
+              <li>1st</li>
+              <li>2nd</li>
+              <li>3rd</li>
+          </ul>
+          <div>
+              <p>This text is just for the exercise</p>
+          </div>
+  Write a function to change the text of only the p which are child of a div (execute the function by assigning it to a button's click event)
+  */
+  const changePContent = function () {
+      document.getElementById("p1").innerText="this is a list of products"
+  };
+  /* EXERCISE 5
+      Write a function to change the list title (you can use previous day's textarea as input or create a new text input field to grab the content)
+  */
+  const changeListTitle = function (content) {
+     let clt=document.getElementsByTagName('textarea')[0].innerText
+      document.getElementById("listTitle")=clt
+  };
+  /* EXERCISE 6
+       Write a function to add a new item ONLY to the second list (create an input field + add button)
+  */
+  const addToTheSecond = function (content) {
+
+     let ats = document.createElement('li')
+     
+   let ats1= document.getElementById('secondList').appendChild(ats)
+   let ats2=document.getElementById("enterItem").innerText
+   ats.innerText=ats2
+   
+  };
+  /* EXERCISE 7
+      Write a function to make the first UL disappear (button)
+  */
+  const firstUlDisappear = function () {
+     let  rmv=document.querySelector("ul")
+     rmv.remove();
+  };
+  /* EXERCISE 8
+      Write a function to make the background of every UL green (button)
+  */
+  const paintItGreen = function () {
+
+      let pit = document.querySelectorAll("ul")
+      let colorarray=["green","yellow","red","purple"]
+      for(i=0,i<=pit.length,i++);{
+          pit[i]=colorarray[i];
+
+      }
+  };
+
+  /* EXERCISE 9
+      Add a "magnifier function" to the table.
+      When the user mouse goes on a table cell (not the image one) the font size must increase.
+      HINT use mouseenter / mouseleave events
+  */
+  const makeThemMagnifiable = function () {};
+  /* EXERCISE 10
+      Add a button to toggle all the product images (toggle => if visible, hide, if not visible, show)
+  */
+  const toggleShowImages = function () {};
+
+  //##### EXTRA
+
+  /* EXERCISE 11
+      Make the heading of the page change color radomly every time the user clicks on it
+      */
+  const makeItClickable = function () {};
+
+  /*EXERCISE 12
+    Refactor your HTML code with HTML5 semantic tags such as header, section, footer, etc
+*/
+</script>
+
+</body>
+
+
+</html>
