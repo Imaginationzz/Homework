@@ -120,7 +120,9 @@ input {
        const addNewTask = function(){
        
        let adnt= document.createElement("li")
-        document.getElementById('myTaskList').appendChild(adnt)
+        let adnt2=document.getElementById('myTaskList').appendChild(adnt)
+        adnt2.innerText=document.getElementById('newTask').value
+        console.log(adtn2)
        }
 
       /* EXERCISE 6: 
