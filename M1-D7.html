@@ -133,6 +133,8 @@
       <input type="button" id="changeheader" value="change header" onclick="changeheader()" />
       <input type="button" id="changebak" value="change bg" onclick="changebg()" />
       <input type="button" id="changeadress" value="change adress" onclick="fAdress()" />
+      <input type="button" id="ex-6 button" value="add list" />
+      <input type="text" id="ex-6 input" value="add list" />
     
     <div id="body">
         <footer>
@@ -216,14 +218,15 @@
        Write a function to add a new item ONLY to the second list (create an input field + add button)
   */
   const addToTheSecond = function (content) {
-
-     let ats = document.createElement('li')
-     
-   let ats1= document.getElementById('secondList').appendChild(ats)
-   let ats2=document.getElementById("enterItem").innerText
-   ats.innerText=ats2
    
-  };
+    content = document.querySelector('#ex-6 input').value
+    let listItem = document.createElement(li)
+    listItem.innerText = $(content)
+    document.querySelector('#secondList').appendChild(listItem)
+
+ document.querySelector('#ex-6 button').onclick = addToTheSecond;
+ window.onload()
+  }
   /* EXERCISE 7
       Write a function to make the first UL disappear (button)
   */
