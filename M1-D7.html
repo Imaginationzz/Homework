@@ -82,7 +82,7 @@
           <div>
               <p id="p1"></p>This text is just for the exercise</p>
               <input type="button" id="changep" value="changePContent" onclick="changePContent()" />
-              <input type="button" id="changls" value="changeListTitle" onclick="changeListTitle(content)" />
+              <input type="button" id="changls" value="changeListTitle" onclick="changeListTitle()" />
               <input type="button" id="changeItem" value="changeItem" onclick="addToTheSecond()" />
               <input type="text" id="enterItem"  />
               
@@ -208,9 +208,9 @@
   /* EXERCISE 5
       Write a function to change the list title (you can use previous day's textarea as input or create a new text input field to grab the content)
   */
-  const changeListTitle = function (content) {
-     let clt=document.getElementsByTagName('textarea')[0].innerText
-      document.getElementById("listTitle")=clt
+  const changeListTitle = function () {
+    document.querySelector("#listTitle")=document.querySelector('textarea').value
+    
   };
   /* EXERCISE 6
        Write a function to add a new item ONLY to the second list (create an input field + add button)
