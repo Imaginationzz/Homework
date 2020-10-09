@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    body{
+        background-color: azure;
+        color: black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        max-width: 768px;
+        margin: 0 auto;
+        font-size: 18px;
+    }
+    h1{
+        font-size: 64px;
+    }
+    h2{
+        font-size: 36px;
+    }
+    #calendar{
+        background-color: black;
+        color:white;
+        width: 100%;
+        
+    }
+    .day{
+        display:inline-block;
+        color:white;
+        width: 14%;
+    }
+    </style>
+</head>
+<body>
+    <div id="calendar">
+
+    </div>
+    <script>
+        const daysInThisMonth=function(){
+            const now = new Date();
+            const newDate =new Date(now.getFullYear(),now.getMonth()+1,0)
+            const daysInTheMonth=newDate.getDate()
+            return daysInTheMonth
+        }
+        window.onload=function(){
+            numberOfdays =daysInThisMonth()
+            const calendar = document.querySelector("#calendar")
+            for(i=0;i<numberOfdays;i++){
+                const child = document.createElement("div")
+                child.className="day"
+                const day=document.createElement('h2')
+                const dayOfTheMonth=i+1
+                day.innerText=dayOfTheMonth
+                child.appendChild(day)
+                calendar.appendChild(child)
+
+            }
+        }
+    </script>
+</body>
+</html>
