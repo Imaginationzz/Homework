@@ -1,7 +1,7 @@
 .choice-container{
     display: flex;
     margin-bottom:0.5rem;
-    width: 100%;
+    width: 50%;
     font-size: 1.8rem;
     border:0.1rem solid rgb(red, green, blue);
     background-color: whitesmoke;

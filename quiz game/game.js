@@ -120,10 +120,11 @@ const questions = [
      const questionIndex = Math.floor(Math.random()* availableQuestions.length);
      currentQuestion = availableQuestions[questionIndex];
      question.innerText = currentQuestion.question;
-        
+ 
      for (const choice of choices){
-        let answers=[] =currentQuestion.incorrect_answers+currentQuestion.correct_answer
-             const number = choice.dataset["number"];
+         let answers = currentQuestion.incorrect_answers
+       
+           const number = choice.dataset["number"];
            choice.innerText = answers[number]
            
 
