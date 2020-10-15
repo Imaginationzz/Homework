@@ -135,6 +135,7 @@
         myUl.appendChild(newLi);
       };
       const addTeam = function () {
+        let myUl = document.querySelector(".list-group");
         let addUser = document.querySelector("#addUser").value;
         let myTeam = document.querySelectorAll(".list-group")[1];
         let newTeam = document.createElement("li");
@@ -142,6 +143,8 @@
         newTeam.classList.add("list-group-item");
         newTeam.classList.add("list-group-item-secondary");
         myTeam.appendChild(newTeam);
+        myUl.removeChild(myUl.lastElementChild)
+        
        
       };
     </script>
