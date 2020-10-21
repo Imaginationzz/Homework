@@ -2,17 +2,20 @@
 <html lang="en">
   <head>
     <style>
-      title {
-        font-size: large;
-        font-weight: bold;
+      h1 {
+        color: blue;
       }
 
-      div nav a {
-        color: red;
+      nav > a.p-2 {
+        color: red !important;
       }
-      p > a.text-white {
-        color: red;
+      .jumbotron a {
+        display: none;
       }
+      .blog-post:first-of-type {
+        background-color: brown;
+      }
+
       div.blog-post p:first-child {
         color: red;
       }
@@ -469,6 +472,7 @@
         document.getElementsByTagName("h2").style.height = "50px";
       };
       // EX16) Write a function to remove all the links under "Elsewhere"
+
       // EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
       // EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
       // EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
