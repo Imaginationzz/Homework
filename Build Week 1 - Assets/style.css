@@ -1,0 +1,145 @@
+/*GENERAL STYLING
+
+TO USE ROOT COLORS: 
+ex. background-color: var(--playbar_bg); 
+*/
+:root {
+  --spotify_green: #41d76d;
+  --general_text: #8c8c8c;
+  --sidebar_bg: #060c12;
+  --sb_login_btn: #161719;
+  --playbar_bg: #2c2c2c;
+  --playbar_light: #b3b3b3;
+  /*elements and buttons*/
+  --playbar_dark: #434343;
+  /*empty progress bar*/
+  --facebook_blue: #3e5a9b;
+  --login_light: #dadada;
+  /*forms, footer and hrs in login page*/
+  --scrollbar: #5e5e5e;
+  /*scroll bar for all pages*/
+}
+@font-face {
+  src: url(fonts/lineto-circular-black.ttf);
+  src: url(fonts/lineto-circular-pro-bold.ttf);
+  src: url(fonts/lineto-circular-pro-book.ttf);
+  src: url(fonts/lineto-circular-pro-medium.ttf);
+  font-family: "lineto";
+  font-style: normal;
+  font-weight: 700;
+}
+body {
+  font-family: "lineto", sans-serif;
+}
+
+p {
+  font-size: 12px;
+}
+.bg_grad {
+  /*Thank you Ermal for this amazing gradient*/
+  background: rgb(37, 70, 109);
+  background: linear-gradient(
+    145deg,
+    rgba(37, 70, 109, 1) 16%,
+    rgba(3, 5, 8, 1) 85%
+  );
+}
+
+.spotify-text-primary {
+  color: var(--general_text);
+}
+
+.spotify-text-secondary {
+  color: white;
+}
+.navbar-nav a {
+  position: relative;
+  letter-spacing: 3px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.navbar-nav a:hover::after {
+  content: "";
+  position: absolute;
+  left: 33%;
+  bottom: 0;
+  height: 1px;
+  width: 35px;
+  border-bottom: 2px solid;
+  border-color: var(--spotify_green);
+}
+
+.spotify-bg-sidebar {
+  background-color: var(--sidebar_bg);
+  height: 43rem;
+  position: relative;
+}
+
+.spotify-bg-sidebar a {
+  text-decoration: none;
+}
+.spotify-bg-sidebar a:hover {
+  border-left: 4px solid var(--spotify_green);
+}
+.spotify-bg-sidebar a:hover span {
+  color: white;
+  transform: translate(-4px);
+}
+.spotify-bg-sidebar div:last-of-type {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.spotify-bg-sidebar div:last-of-type a:hover {
+  border: none;
+  color: white;
+}
+.spotify-green-bg {
+  background-color: var(--spotify_green);
+}
+
+.spotify-btn-primary {
+  background-color: white;
+  color: var(--sidebar_bg);
+  width: 90%;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border: 2px solid white;
+}
+.spotify-btn-primary:hover {
+  background-color: rgba(255, 255, 255, 0.123);
+  color: white;
+  border: 2px solid white;
+}
+
+.spotify-btn-secondary {
+  /*this will also apply to the "follow" button in the artist page, but the background opacity has to be lowered*/
+  background-color: var(--sb_login_btn);
+  color: white;
+  border: 2px solid;
+  border-color: #afafae;
+  width: 90%;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.spotify-btn-secondary:hover {
+  /*this will also apply to the "follow" button in the artist page, but the background opacity has to be lowered*/
+  background-color: rgba(255, 255, 255, 0.123);
+  border-color: white;
+}
+
+.spotify-btn-green {
+  /*this applies to bith play button in the artists' page and the log-in button in the login page*/
+  background-color: var(--spotify_green);
+  color: white;
+}
+
+.spotify-btn-facebook {
+  background-color: var(--facebook_blue);
+  color: white;
+}
+
+.spotify-btn-apple {
+  background-color: black;
+  color: white;
+}
