@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        padding: 0 20px;
+      }
+
+      p {
+        text-align: left;
+        padding: 0 20px;
+      }
+
+      .box {
+        border: solid 1px;
+        background: rgb(214, 117, 117);
+        padding: 6px;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FETCH API</title>
+  </head>
+
+  <body>
+    <div>
+      <p>Generate automatically 3 lists based on the "search API" response</p>
+      <div><button type="button">Click to get the content</button></div>
+      <ul>
+        <li>es.: https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem</li>
+        <li>
+          es.: https://deezerdevs-deezer.p.rapidapi.com/search?q=metallica
+        </li>
+        <li>es.: https://deezerdevs-deezer.p.rapidapi.com/search?q=behemoth</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    document.querySelector("button").addEventListener(
+      "click",
+      function () {
+        fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
+          "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+          "X-RapidAPI-Key":
+            "dadb0572d1mshf513c7c09dbd153p184fa1jsndbdedc59fd83",
+        })
+          .then((response) => {
+            return response.json();
+          })
+          .then((myContent) => {
+            document.getElementsByTagName("p").innerHTML = myContent;
+            document.getElementsByTagName("p").classList.add("box");
+          });
+      },
+      false
+    );
+  </script>
+</html>
