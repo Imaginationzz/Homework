@@ -21,7 +21,7 @@
   <body>
     <div class="container">
       <div class="row text-center" id="booksdiv">
-        <h1 class="bg-danger text-center">shopping cart experience</h1>
+        <h1 class="bg-danger">Shopping Cart Experience</h1>
       </div>
     </div>
 
@@ -52,7 +52,7 @@
               <button
                 type="button"
                 class="btn btn-sm btn-success"
-              ><a href="detail.html?${book.asin}">View </a></button>
+              ><a href="detail.html?${book.asin}">Preview </a></button>
               
                 
               <button onclick = "skip(this)" type="button"class="btn btn-sm btn-success">
@@ -65,27 +65,27 @@
             }
             //newRow.innerHTML += `<h1> ${query}</h1>`;
             booksDiv.appendChild(newRow);
-            const cart = [];
-            const addToCart = function () {
-              let selected = this.parentElement.parentElement.parentElement;
-              selected.classList.add("bg-success");
-              cart.push(selected.parentElement.id);
-              let selectedBook = Books.filter(
-                (book) => book.asin === selected.parentElement.id
-              );
-              let list = document.querySelector(".list-group");
-              let li = document.createElement("li");
-              li.classList.add("list-group-item");
-              li.innerHTML = selectedBook[0].title;
-              let delBtn = document.createElement("button");
-              delBtn.classList.add("btn");
-              delBtn.classList.add("btn-dark");
-              delBtn.innerHTML = "Remove";
-              delBtn.setAttribute("onclick", "removeCart(this)");
-              li.appendChild(delBtn);
-              list.appendChild(li);
-              //console.log(selectedBook[0].title);
-            };
+            // const cart = [];
+            // const addToCart = function () {
+            //   let selected = this.parentElement.parentElement.parentElement;
+            //   selected.classList.add("bg-success");
+            //   cart.push(selected.parentElement.id);
+            //   let selectedBook = Books.filter(
+            //     (book) => book.asin === selected.parentElement.id
+            //   );
+            //   let list = document.querySelector(".list-group");
+            //   let li = document.createElement("li");
+            //   li.classList.add("list-group-item");
+            //   li.innerHTML = selectedBook[0].title;
+            //   let delBtn = document.createElement("button");
+            //   delBtn.classList.add("btn");
+            //   delBtn.classList.add("btn-dark");
+            //   delBtn.innerHTML = "Remove";
+            //   delBtn.setAttribute("onclick", "removeCart(this)");
+            //   li.appendChild(delBtn);
+            //   list.appendChild(li);
+            //   //console.log(selectedBook[0].title);
+            // };
           });
       }
 
