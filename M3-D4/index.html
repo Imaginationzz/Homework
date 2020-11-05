@@ -47,34 +47,51 @@
                 <div class="card-body ">
                     <h5 class="card-title">${book.title}</h5>
                     <p class="card-text">${book.category}-${book.price}$</p>
-                    <a href="#" class="btn btn-success" id=firstbtn onclick="add()">Add To Cart</a>
-                    <a href="#" class="btn btn-success" id="secondbtn" onclick="del()">Skip</a>
-
-                </div>
+            
+                    <div class="btn-group">
+              <button
+                type="button"
+                class="btn btn-sm btn-success"
+              ><a href="detail.html?${book.asin}">View </a></button>
+              
+                
+              <button onclick = "skip(this)" type="button"class="btn btn-sm btn-success">
+                Skip </button>
+                
+                <button type="button"
+                class="btn btn-sm btn-success">Add to Cart</button>
+            </div>
                 </div>`;
             }
             //newRow.innerHTML += `<h1> ${query}</h1>`;
             booksDiv.appendChild(newRow);
-
-            const add = function () {
-              const change = document.querySelector(".card");
-              //change.classList.add("bg-secondary");
-              const active = document.querySelector("#firstbtn");
-              active.classList.add("active");
-              const books2 = books.filter(
-                (element) => element.classList.active === true
+            const cart = [];
+            const addToCart = function () {
+              let selected = this.parentElement.parentElement.parentElement;
+              selected.classList.add("bg-success");
+              cart.push(selected.parentElement.id);
+              let selectedBook = Books.filter(
+                (book) => book.asin === selected.parentElement.id
               );
-              console.log(books2);
+              let list = document.querySelector(".list-group");
+              let li = document.createElement("li");
+              li.classList.add("list-group-item");
+              li.innerHTML = selectedBook[0].title;
+              let delBtn = document.createElement("button");
+              delBtn.classList.add("btn");
+              delBtn.classList.add("btn-dark");
+              delBtn.innerHTML = "Remove";
+              delBtn.setAttribute("onclick", "removeCart(this)");
+              li.appendChild(delBtn);
+              list.appendChild(li);
+              //console.log(selectedBook[0].title);
             };
-            add();
           });
       }
 
-      const del = function () {
-        const del = document.querySelectorAll("#secondbtn");
-        for (let i = 0; i < del.length; i++) {
-          del[i].classList.add("d-none");
-        }
+      const skip = function (skipBtn) {
+        let selected = skipBtn.parentElement.parentElement.parentElement;
+        selected.remove();
       };
 
       window.onload = function () {
