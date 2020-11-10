@@ -17,7 +17,13 @@
     />
 
     <title>Hello, world!</title>
+    <style>
+      main {
+        width: 100%;
+      }
+    </style>
   </head>
+
   <body>
     <header>
       <div class="collapse bg-dark" id="navbarHeader">
@@ -82,9 +88,9 @@
       </div>
     </header>
     <main role="main">
-      <section class="jumbotron text-center">
+      <section class="jumbotron text-center w-100 bg-dark">
         <div class="container d-flex justify-content-center">
-          <div class="card" style="width: 18rem">
+          <div class="card rounded-pill overflow-hidden" style="width: 50%">
             <img src="" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
@@ -96,18 +102,9 @@
           </div>
         </div>
       </section>
-    </main>
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p></p>
-        <p></p>
-      </div>
-    </footer>
-    <!-- Optional JavaScript; choose one of the two! -->
 
+      <ul class="list-group"></ul>
+    </main>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -122,22 +119,32 @@
     <script>
       const queryString = window.location.search;
       const slicedQuery = queryString.slice(1);
+
       console.log(slicedQuery);
       async function getDetails() {
         try {
           const response = await fetch(
-            "https://striveschool-api.herokuapp.com/books"
+            "https://deezerdevs-deezer.p.rapidapi.com/artist/" + slicedQuery,
+            {
+              headers: {
+                "x-rapidapi-key":
+                  "dadb0572d1mshf513c7c09dbd153p184fa1jsndbdedc59fd83",
+                "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+              },
+            }
           );
           const data = await response.json();
-          const selected = data.filter((book) => book.asin === slicedQuery);
+          // const selected = data.filter((artist) => artist.id === slicedQuery);
+
+          // console.log(data)
           let img = document.querySelector("img");
           let cardTitle = document.querySelector(".card-title");
           let cardText = document.querySelector(".card-text");
-          cardText.innerHTML = `<strong>Price: </strong>${selected[0].price} 
-          <strong>Genre: </strong>${selected[0].category}`;
-          cardTitle.innerHTML = selected[0].title;
-          img.setAttribute("src", selected[0].img);
-          console.log(selected[0].title);
+          cardText.innerHTML = `<strong>Number of fans: </strong>${data.nb_fan} 
+                <br><strong>Number of Album: </strong>${data.nb_album}`;
+          cardTitle.innerHTML = data.name;
+          img.setAttribute("src", data.picture_big);
+          console.log(data.title);
         } catch (error) {
           console.log(error);
         }
