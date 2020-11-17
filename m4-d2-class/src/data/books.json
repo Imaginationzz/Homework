@@ -1,0 +1,27 @@
+[
+  {
+    "id": 0,
+    "name": "Book1",
+    "image": "assets/images/book1.jpg",
+    "category": "Fiction",
+    "price": "25",
+    "description": "DEsc for Book1"
+  },
+  {
+    "id": 1,
+    "name": "Book2",
+    "image": "assets/images/book2.jpg",
+    "category": "Kids",
+
+    "price": "20",
+    "description": "DEsc for Book1"
+  },
+  {
+    "id": 2,
+    "name": "Book3",
+    "image": "assets/images/book3.jpg",
+    "category": "Science",
+    "price": "30",
+    "description": "DEsc for Book1"
+  }
+]

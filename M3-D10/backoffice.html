@@ -152,9 +152,9 @@
 
       const handleSubmit = async (e) => {
         e.preventDefault();
-        submitEvent();
+        submitMovie();
       };
-      const submitEvent = async () => {
+      const submitMovie = async () => {
         let spinner = document.querySelector("#loadingSpinner");
         spinner.classList.toggle("d-none"); // showing the spinner
 
@@ -166,9 +166,10 @@
           description: document.getElementById("description").value,
         };
         try {
+          let query = "crime";
           let response;
           if (id) {
-            response = await fetch(url + id, {
+            response = await fetch(url + query + id, {
               // our PUT request is made with the fetch method as well!
               method: "PUT", // declaring the CRUD method
               body: JSON.stringify(movieInfos), // we need to stringify the JS object in order to send it
