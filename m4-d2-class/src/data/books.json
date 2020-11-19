@@ -2,7 +2,7 @@
   {
     "id": 0,
     "name": "Book1",
-    "image": "assets/images/book1.jpg",
+    "image": "https://s2.qwant.com/thumbr/0x380/5/b/08b2cfb352bcd8510cfa12a87f558fb58c3eb2e466bfd560b32c52ff88402c/1140-yeager-sell-your-used-books.imgcache.rev6feda141288df73e8fd100822bb375ea.jpg?u=https%3A%2F%2Fcdn.aarp.net%2Fcontent%2Fdam%2Faarp%2Fmoney%2Fbudgeting_savings%2F2016%2F04%2F1140-yeager-sell-your-used-books.imgcache.rev6feda141288df73e8fd100822bb375ea.jpg&q=0&b=1&p=0&a=1",
     "category": "Fiction",
     "price": "25",
     "description": "DEsc for Book1"
@@ -10,7 +10,7 @@
   {
     "id": 1,
     "name": "Book2",
-    "image": "assets/images/book2.jpg",
+    "image": "https://s1.qwant.com/thumbr/0x380/1/e/af486eca9e948509dc887b09963d1fd6590cae4ce77e8cdb9efee8b54db52f/old-dusty-books.jpg?u=https%3A%2F%2Fiphoneappbackup.files.wordpress.com%2F2014%2F04%2Fold-dusty-books.jpg%3Fw%3D1200&q=0&b=1&p=0&a=1",
     "category": "Kids",
 
     "price": "20",
@@ -19,7 +19,7 @@
   {
     "id": 2,
     "name": "Book3",
-    "image": "assets/images/book3.jpg",
+    "image": "https://s2.qwant.com/thumbr/0x380/4/8/3a92a5f01453d605a775a446a0d3d8bd2d015c8e24e9c89056f667e2a3a25c/books-book-vintage-books-old-books-stack-of-books-reading-literature-poetry-stories-novels-1456175.jpg?u=https%3A%2F%2Fget.pxhere.com%2Fphoto%2Fbooks-book-vintage-books-old-books-stack-of-books-reading-literature-poetry-stories-novels-1456175.jpg&q=0&b=1&p=0&a=1",
     "category": "Science",
     "price": "30",
     "description": "DEsc for Book1"
