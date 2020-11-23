@@ -1,0 +1,222 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="Account.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <style>
+      .navbar-netflix {
+    background-color: #141414;
+    font-size: 9pt;
+    font-weight: bold;
+    letter-spacing: 0.2px
+}
+
+.nav-link {
+    color: #9f9a9c;
+}
+
+.user-dropdown {
+    border-color: #141414
+}
+.setbackgroundcolor {
+    background-color: #141414 !important;
+}
+    </style>
+    <title>Account</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-netflix pb-4">
+      <a class="navbar-brand pl-3" href="#"><img class="mr-3" src="assets/netflix-logo-png-2562.png"
+              style="width:80px;" class="m-2"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="nav-link pl-1 pr-3" href="#">Home</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link text-light" href="#">TV Shows <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item pl-2">
+                  <a class="nav-link" href="#">Movies</a>
+              </li>
+              <li class="nav-item pl-2">
+                  <a class="nav-link" href="#">Recently Added</a>
+              </li>
+              <li class="nav-item pl-2">
+                  <a class="nav-link" href="#">My List</a>
+              </li>
+          </ul>
+          <span class="pr-4">
+              <form class="form-inline my-2 my-lg-0">
+                  <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-search pb-1 pl-2"
+                      fill=" white" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd"
+                          d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                      <path fill-rule="evenodd"
+                          d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                  </svg>
+                  <a class="nav-link pl-4" href="#">KIDS</a>
+                  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bell-fill pl-2" fill="white"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                          d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                  </svg>
+                  <div class="dropdown setbackgroundcolor pl-2">
+                      <a class="btn dropdown-toggle btn-secondary setbackgroundcolor user-dropdown" href="#"
+                          role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          <img src="assets/AAAABXLdEDdRsI5AZgaWIbpqFzSO-DNequOaLCmJ2Ms4rqVwq4BkkrtZuSkb2Z7i-iwFn_IgVv41UP8AkgrapFM-kh1hALeb.png"
+                              style="width: 2vw;"> </a>
+                      <div class="dropdown-menu dropdown-menu-right setbackgroundcolor text-light border-light "
+                          aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item text-light" href="EditProfile.html">Profile</a>
+                          <a class="dropdown-item text-light" href="Account.html">Settings</a>
+                      </div>
+                  </div>
+              </form>
+          </span>
+      </div>
+  </nav>
+    <div class="container">
+      <h1 class="d-mt-1 d-pb-1 d-m-mt-4 d-m-pb-3">Account</h1>
+      <hr />
+      <div class="row mt-3 pb-3">
+        <section class="col-12 col-md-12 col-lg-3">
+          <h4 class="text-secondary">MEMBERSIP & BILLING</h4>
+          <button class="button1">Cancel Membership</button>
+        </section>
+        <section class="col-12 col-md-12 col-lg-8">
+          <div class="changeAccount ml-1">
+            <div class="accountInfo">
+              <h5 style="color: #333; font-weight: bold">
+                student@strive.school
+              </h5>
+              <h5>Password: ********</h5>
+              <h5>Phone: 123 456 7891</h5>
+            </div>
+
+            <div class="accountInfo2 mr-0">
+              <a href="#" target="_blank">Change account email</a>
+              <a href="#" target="_blank">Change password</a>
+              <a href="#" target="_blank">Change phone number</a>
+            </div>
+            <hr />
+          </div>
+          <div class="paymentMethod ml-1 mt-3">
+            <div class="payPal">
+              <img
+                class="img-fluid"
+                src="https://www.pngitem.com/pimgs/m/200-2005131_paypal-logo-png-grey-transparent-png.png"
+              />
+              <h5 style="color: #333; font-weight: bold">
+                admin@strive.school
+              </h5>
+            </div>
+            <div class="changePayPal">
+              <a href="#" target="_blank">Update payment info</a>
+              <a href="#" target="_blank">Billing details</a>
+            </div>
+          </div>
+          <hr />
+          <div class="giftCard mt-3">
+            <a href="#" target="_blank">Redeem gift card or promo code</a>
+            <a href="#" target="_blank">Where to buy gift card</a>
+          </div>
+        </section>
+      </div>
+      <hr />
+      <div class="row pb-0">
+        <section class="col-12 col-md-12 col-lg-3">
+          <h4 class="text-secondary">PLAN DETAILS</h4>
+        </section>
+        <section class="col-8">
+          <div class="plan">
+            <h5 style="color: #333; font-weight: bold">Premium</h5>
+            <img
+              src="https://www.seekpng.com/png/detail/99-997843_image-4k-ultra-hd-blu-ray-logo.png"
+            />
+          </div>
+          <div class="planLink">
+            <a href="#" target="_blank">Change plan</a>
+          </div>
+        </section>
+      </div>
+      <hr />
+      <div class="row mt-3 pb-2">
+        <section class="col-12 col-md-12 col-lg-3">
+          <h4 class="text-secondary">SETTINGS</h4>
+        </section>
+        <section class="settings col-8">
+          <a href="#" target="_blank">Parental controls</a>
+          <a href="#" target="_blank">Test participation</a>
+          <a href="#" target="_blank">Manage download devices</a>
+          <a href="#" target="_blank">Activate a device</a>
+          <a href="#" target="_blank">Recent device streaming activity</a>
+          <a href="#" target="_blank">Sing out of all devices</a>
+        </section>
+      </div>
+      <hr />
+      <div class="row mt-3 pb-2 border-0">
+        <section class="col-12 col-md-12 col-lg-3">
+          <h4 class="text-secondary">MY PROFILE</h4>
+        </section>
+        <section class="col-12 col-md-12 col-lg-8">
+          <div>
+            <div class="profile">
+              <img
+                src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/1bdc9a33850498.56ba69ac2ba5b.png"
+              />
+              <h5 style="color: #333; font-weight: bold">Strive student</h5>
+            </div>
+            <div class="manageProfile">
+              <a href="#" target="_blank">Manage profiles</a>
+              <a href="#" target="_blank">Add profile email</a>
+            </div>
+          </div>
+          <div>
+            <div class="diffSettings mt-4">
+              <a href="#" target="_blank">Language</a>
+              <a href="#" target="_blank">Playback settings</a>
+              <a href="#" target="_blank">Subtitle appearance</a>
+            </div>
+            <div class="ratings mt-4">
+              <a href="#" target="_blank">Viewing activity</a>
+              <a href="#" target="_blank">Ratings</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <footer id="main-footer"></footer>
+    <script src="Account.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+body {
+    background-color: #141414;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+
+a {
+    color: #9f9a9c
+}
+
+a:hover {
+    color: #9f9a9c
+}
+
+footer {
+    width: 800px;
+    height: 550px;
+    margin-top: 13vw;
+    margin-left: 23vw;
+    margin-right: 20vw;
+    font-size: 10pt
+}
+
+.col {
+    padding-bottom: 15px;
+}
+
+.pics {
+    width: calc(100%-31px);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+.setbackgroundcolor {
+    background-color: #141414 !important;
+}
+
+.navbar-netflix {
+    background-color: #141414;
+    font-size: 9pt;
+    font-weight: bold;
+    letter-spacing: 0.2px
+}
+
+.nav-link {
+    color: #9f9a9c;
+}
+
+.user-dropdown {
+    border-color: #141414
+}
+
+.alignwlogo {
+    padding-left: 31px
+}
+
+.bigtitles {
+    font-weight: 580;
+    font-size: 30px;
+    letter-spacing: 0.05rem;
+}
+
+.smalltitle {
+    font-weight: 550;
+    font-size: 22px;
+
+}
+
+.genretitle {
+    font-size: 15px
+}
+
+.genresmenu {
+    width: 130px;
+    text-align: initial;
+    border-radius: 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #9f9a9c
+}
+
+.genresdropdown {
+    border-style: none;
+    border-radius: 0px
+}
+
+.dropdown-toggle {
+    align-content: center
+}
+
+.thumbnails {
+    width: 220px
+}
+
+.visualbutton {
+    border-radius: 1px;
+    border-color: #9f9a9c;
+    padding-bottom: 9px;
+
+    width: auto;
+    height: 25px;
+
+}
+
+.visicons {
+    margin-bottom: 11px;
+    margin-top: -3px;
+    color: #9f9a9c;
+    padding-right: 2px;
+}
+
+.alignright {
+    padding-left: 960px
+}
+
+.icons {
+    width: 25px;
+}
