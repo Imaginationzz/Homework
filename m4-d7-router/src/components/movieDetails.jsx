@@ -5,23 +5,21 @@ import { Badge, Card, Col, Container, Row } from "react-bootstrap";
 class movieDetails extends React.Component {
   state = {
     movie: null,
-    movieTitle: this.props.match.params.Title,
     fetching: true,
   };
 
   fetchMovies = async () => {
+    const movieID = this.props.match.params.id;
     try {
       const response = await fetch(
-        "http://www.omdbapi.com/?apikey=ad2a416a&s=" + this.state.movieTitle
+        "http://www.omdbapi.com/?apikey=ad2a416a&s=" + movieID
       );
 
       const result = await response.json();
-      const second = result.Search;
-      const third = second.map((third) => third);
 
       this.setState({ movie: result, fetching: false });
 
-      console.log(third, "ddddd");
+      console.log(result, "ddddd");
     } catch (e) {
       console.log(e);
       this.setState({ fetching: false });
