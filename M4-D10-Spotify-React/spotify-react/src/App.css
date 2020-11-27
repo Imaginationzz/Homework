@@ -1,0 +1,93 @@
+.App {
+  text-align: start;
+  background-color: #101010;
+}
+
+footer ul li {
+  list-style: none;
+  font-size: 15px;
+}
+
+a {
+  color: #969393;
+}
+
+footer ul li a:hover {
+  color: white;
+}
+
+/* ***Navbar** */
+.Navbar-toggle {
+  border: none !important;
+  background-color: none !important;
+}
+
+.Navbar-toggle:hover {
+  border: none;
+}
+
+.App .nav-img {
+  height: 40px;
+}
+
+#dropdown-menu-align-right {
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+
+/* Carousel */
+.imagesContainer {
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: hidden;
+  font-size: 0;
+}
+
+.image-item {
+  transition: transform 0.5s;
+  display: inline-block;
+  width: 20%;
+  height: 200px;
+  cursor: pointer;
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.imagesContainer:focus-within .image-item,
+.imagesContainer:hover .image-item {
+  transform: translateX(-25%);
+}
+
+.image-item:focus ~ .image-item,
+.image-item:hover ~ .image-item {
+  transform: translateX(25%);
+}
+
+.imagesContainer .image-item:focus,
+.imagesContainer .image-item:hover {
+  transform: scale(1.5);
+  z-index: 1;
+}
+
+h2 {
+  text-transform: capitalize;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  border-radius: 50%;
+  top: 40%;
+  margin: 0 10px;
+}
+
+/* accountPage */
+.accountPage {
+  background-color: white;
+}
