@@ -35,7 +35,13 @@ router.post("/", (req, res) => {
   const studentsArray = JSON.parse(fileAsAString);
   const newStudent = req.body;
   newStudent.id = uniqid();
-  studentsArray.push(newStudent);
+  studentsArray.map((student) => {
+    if (student.email === newStudent.email) {
+      console.log("we cannot process this");
+    } else {
+      studentsArray.push(newStudent);
+    }
+  });
 
   fs.writeFileSync(studentsFilePath, JSON.stringify(studentsArray));
 
@@ -58,8 +64,6 @@ router.put("/:id", (req, res) => {
   const modifiedStudent = req.body;
   modifiedStudent.id = req.params.id;
   newStudentsArray.push(modifiedStudent);
-
-  // 5. Write it back on disk
 
   fs.writeFileSync(usersFilePath, JSON.stringify(newStudentsArray));
   res.send("Modify Student route");
