@@ -1,10 +1,11 @@
 import React from "react";
 import { ListGroup, Spinner } from "react-bootstrap";
+import { useParams } from "react-router";
 import Home from "./Home";
 
 const Detail = (props) => {
-  const params = new URLSearchParams(props.location.search);
-  const id = params.get("id");
+  const params = useParams();
+  alert(params.id);
 
   return (
     <div className="mb-5">
